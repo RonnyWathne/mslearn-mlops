@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 
 # define functions
 def main(args):
-    # TO DO: enable autologging
+    enable autologging
     mlflow.autolog()
 
     # read data
@@ -37,8 +37,10 @@ def get_csvs_df(path):
     return pd.concat((pd.read_csv(f) for f in csv_files), sort=False)
 
 
-# TO DO: add function to split data
-def  split_data(df):
+# function to split data
+def split_data(df):
+    
+    
     return X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
 
 def train_model(reg_rate, X_train, X_test, y_train, y_test):
